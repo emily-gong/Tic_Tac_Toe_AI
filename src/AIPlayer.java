@@ -44,7 +44,7 @@ public class AIPlayer {
 
         for (int i = 0; i < 3; i++) {
             int[] array2 = {i,i,i};
-            //evaluate all rows
+            //evaluate all cols
             result = getResultForOneLine(board, playerType, enemyType,array2,array1);
             if (result == TWO_O_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
@@ -59,24 +59,24 @@ public class AIPlayer {
                     }
                 }
             }
-            //evaluate all cols
+            //evaluate all rows
             result = getResultForOneLine(board, playerType, enemyType, array1,array2);
             if (result == TWO_O_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
-                    if (board[i][j] == 0) {
-                        myPoint = new Point(i,j);
+                    if (board[j][i] == 0) {
+                        myPoint = new Point(j,i);
                     }
                 }
             } else if (result == TWO_X_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
-                    if (board[i][j] == 0) {
-                        enemyPoint = new Point(i,j);
+                    if (board[j][i] == 0) {
+                        enemyPoint = new Point(j,i);
                     }
                 }
             }
         }
         //evaluate diagonals
-        int[] array3 = {2,1,0};
+        // right-down diagonal
         result = getResultForOneLine(board, playerType, enemyType, array1, array1);
         if (result == TWO_O_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
@@ -91,10 +91,12 @@ public class AIPlayer {
                 }
             }
         }
+        //left-up diagonal
+        int[] array3 = {2,1,0};
         result = getResultForOneLine(board, playerType, enemyType, array1, array3);
         if (result == TWO_O_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
-                if (board[2 - j][j] == 0) {
+                if (board[2-j][j] == 0) {
                     myPoint = new Point(2-j,j);
                 }
             }
@@ -187,9 +189,14 @@ public class AIPlayer {
             else
                 blankCount++;
         }
-
+        if (board[1][1] == playerType) {
+            result += 10;
+        }
+//        if (board[0][0] == playerType || board[2][0] == playerType || board[0][2] == playerType || board[2][2] == playerType) {
+//            result += 5;
+//        }
         if (myCount == 3) {
-            result += 100;
+            result += 500;
         }
         if (myCount == 2) {
             //used in checkTwoInALine
@@ -202,7 +209,7 @@ public class AIPlayer {
             result += 5;
         }
         if (enemyCount == 3) {
-            result += -100;
+            result += -1000;
         }
         if (enemyCount == 2) {
             //used in checkTwoInALine

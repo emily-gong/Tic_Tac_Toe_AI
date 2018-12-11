@@ -55,7 +55,6 @@ public class Application extends JFrame {
 
                 int x = (mouseX - X_SHIFT) / CELL_SIZE;
                 int y = (mouseY - Y_SHIFT) / CELL_SIZE;
-                System.out.println("X: " + x + ", Y: " + y);
 
                 if (x < 3 && y < 3 && game.currentPlayer == Game.PLAYER_X && gameStatus == 0) {
                     if (game.placeMove(new Point(x, y), Game.PLAYER_X)) {
@@ -160,7 +159,7 @@ public class Application extends JFrame {
                     message.setText("AiLin's Turn");
                 }
             } else if (gameStatus == 1) {//X Won
-                message.setText("Congratulations! You Won!(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧");
+                message.setText("Congratulations! You Won!");
             } else if (gameStatus == 2) {//O Won
                 message.setText("AiLin won!");
             } else {//draw

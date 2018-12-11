@@ -67,7 +67,6 @@ public class Game {
 
     public boolean placeMove(Point point, int playerType) {
         if (gameBoard[point.x][point.y] != 0 && playerType != 0) {
-            System.out.println("Can't place here!");
             return false;
         }
         gameBoard[point.x][point.y] = playerType;
