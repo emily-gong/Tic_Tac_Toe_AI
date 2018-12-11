@@ -6,13 +6,14 @@ public class Game {
     public static final int PLAYER_X = 1;
     public static final int PLAYER_O = 2;
 
+    //x,y gameBoard -- 3 long rectangles of height 3
     private int[][] gameBoard;
 
-    private boolean isPlayerO;
+    protected int currentPlayer;
 
     public Game() {
         gameBoard = new int[][]{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-        isPlayerO = true;
+        currentPlayer = 1;
     }
 
     //EFFECTS: return a list of all empty cells in the game as points
@@ -29,64 +30,52 @@ public class Game {
     }
 
     public boolean checkXWon() {
-        //check vertical and horizontal, rightDiagonal
+        return checkPlayerWon(PLAYER_X);
+    }
+
+    public boolean checkOWon() {
+        return checkPlayerWon(PLAYER_O);
+    }
+
+    private boolean checkPlayerWon(int playerType) {
         int rDiagonal = 0;
         for (int i = 0; i < 3; i++) {
             int verCount = 0;
             int horCount = 0;
             for (int j = 0; j < 3; j++) {
-                if (gameBoard[i][j] == PLAYER_X)
+                if (gameBoard[i][j] == playerType)
                     verCount++;
-                if (gameBoard[j][i] == PLAYER_X)
+                if (gameBoard[j][i] == playerType)
                     horCount++;
-                if (i == j) {
-                    if (gameBoard[i][j] == PLAYER_X)
-                        rDiagonal++;
-                }
+                if (i == j && gameBoard[i][j] == playerType)
+                    rDiagonal++;
             }
             if (verCount == 3 || horCount == 3)
                 return true;
         }
-        return rDiagonal == 3 || (gameBoard[1][1] == 1 && gameBoard[2][0] == 1 && gameBoard[0][2] == 1);
-    }
-
-    public boolean checkOWon() {
-        int rDiagonal = 0;
-        for (int i = 0; i < 3; i++) {
-            int verCount = 0;
-            int horCount = 0;
-            for (int j = 0; j < 3; j++) {
-                if (gameBoard[i][j] == 2)
-                    verCount++;
-                if (gameBoard[j][i] == 2)
-                    horCount++;
-                if (i == j && gameBoard[i][j] == PLAYER_O)
-                    rDiagonal++;
-            }
-            if (verCount == 0 || horCount == 0)
-                return true;
-        }
-        return rDiagonal == 3 || (gameBoard[1][1] == 2 && gameBoard[2][0] == 2 && gameBoard[0][2] == 2);
+        return rDiagonal == 3 ||
+                (gameBoard[1][1] == playerType && gameBoard[2][0] == playerType && gameBoard[0][2] == playerType);
     }
 
     public boolean isGameOver() {
         return findEmptyCells().isEmpty();
     }
 
-    public boolean isOTurn() {
-        return isPlayerO;
+    public int[][] getGameBoard() {
+        return gameBoard;
     }
 
     public boolean placeMove(Point point, int playerType) {
-        if (gameBoard[point.x][point.y] != 0) {
+        if (gameBoard[point.x][point.y] != 0 && playerType != 0) {
             System.out.println("Can't place here!");
             return false;
         }
         gameBoard[point.x][point.y] = playerType;
-        isPlayerO = !isPlayerO;
         return true;
     }
 
 
-
+    public void changePlayer() {
+        currentPlayer = (currentPlayer == PLAYER_X)? PLAYER_O : PLAYER_X;
+    }
 }
