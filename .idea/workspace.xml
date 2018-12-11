@@ -47,12 +47,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="55" />
-          <entry key="java" value="13453" />
+          <entry key="java" value="13693" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13453" />
+          <entry key="JAVA" value="13693" />
           <entry key="PLAIN_TEXT" value="55" />
         </counts>
       </usages-collector>
@@ -63,10 +63,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+            <state relative-caret-position="1612">
+              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6107#6108#0" expanded="true" />
+                <element signature="e#6163#6164#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,13 +77,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="969">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#862#863#0" expanded="true" />
                 <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
+                <element signature="e#1847#1848#0" expanded="true" />
                 <element signature="e#1879#1880#0" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
+                <element signature="e#2288#2289#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,25 +97,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2309">
-              <caret line="193" column="4" lean-forward="true" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#277#278#0" expanded="true" />
                 <element signature="e#321#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/humanPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-              <folding>
-                <element signature="e#96#97#0" expanded="true" />
-                <element signature="e#140#141#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/humanPlayer.java" />
         <option value="$PROJECT_DIR$/src/Board.java" />
         <option value="$PROJECT_DIR$/src/test/GraphicTest.java" />
-        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/AIPlayer.java" />
       </list>
     </option>
@@ -157,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,14 +168,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544560318564" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544560829515" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -226,12 +220,12 @@
       <workItem from="1543128069084" duration="22870000" />
       <workItem from="1544070902978" duration="3738000" />
       <workItem from="1544398499435" duration="32603000" />
-      <workItem from="1544557383861" duration="2649000" />
+      <workItem from="1544557383861" duration="3389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61860000" />
+    <option name="totallyTimeSpent" value="62600000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -246,7 +240,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.40978077" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12631579" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -325,6 +319,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
+          <folding>
+            <element signature="e#6096#6097#0" expanded="true" />
+            <element signature="e#6137#6138#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -403,7 +401,7 @@
     <entry file="file://$PROJECT_DIR$/src/humanPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
             <element signature="e#96#97#0" expanded="true" />
             <element signature="e#140#141#0" expanded="true" />
@@ -411,33 +409,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="969">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#862#863#0" expanded="true" />
             <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1847#1848#0" expanded="true" />
             <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
+            <element signature="e#2288#2289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1612">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6107#6108#0" expanded="true" />
+            <element signature="e#6163#6164#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2309">
-          <caret line="193" column="4" lean-forward="true" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#277#278#0" expanded="true" />

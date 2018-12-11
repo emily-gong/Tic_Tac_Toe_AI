@@ -126,6 +126,14 @@ public class AIPlayer {
 
         List<Point> blankCells = game.findEmptyCells();
 
+        //if center point is empty, put piece on center
+        if (blankCells.size() == 8 && game.placeMove(new Point(1,1),this.playerType)) {
+            Point centerPoint = new Point(1,1);
+            game.placeMove(centerPoint, 0);
+            nextMove = centerPoint;
+            return 0;
+        }
+
         if (blankCells.isEmpty()) { // || depth == 0)
             return evaluate(game.getGameBoard(), Game.PLAYER_O);
         }
