@@ -3,17 +3,24 @@ import java.awt.*;
 import java.util.List;
 
 public class AIPlayer {
+    public static final int TWO_O_IN_A_LINE = 555;
+    public static final int TWO_X_IN_A_LINE = -555;
     private int playerType; //PLAYER_O
     private Game game;
 
-    //This is where we will store the best next move we found
-    public Point nextMove;
+    /* This is where we will store the best next move we found
+     * updated by calculateNextMove
+     */
+    private Point nextMove;
 
     public AIPlayer(int playerType) {
         this.playerType = playerType;
     }
 
-    //return coordinate of next move
+    /* EFFECT:return coordinate of next move
+     * NOTE: checkTwoInALine first checks to see if there are two's with a blank already, in which case
+     * we can proceed right away, otherwise use minimax to calculate next move
+     */
     public Point calculateNextMove(Game game) {
         this.game = game;
         if (!checkTwoInALine(playerType)) {
@@ -22,7 +29,10 @@ public class AIPlayer {
         return nextMove;
     }
 
-    //check if there are 2 O's or 2 X's in a row already
+    /*check if there are 2 O's or 2 X's in a row already
+     * return true if there are 2 O or 2 X in that order, update nextMove
+     * return false if no two's, nextMove is not modified
+     */
     private boolean checkTwoInALine(int playerType) {
         int[][] board = game.getGameBoard();
         int enemyType = (playerType == Game.PLAYER_X) ? Game.PLAYER_O:Game.PLAYER_X;
@@ -36,13 +46,13 @@ public class AIPlayer {
             int[] array2 = {i,i,i};
             //evaluate all rows
             result = getResultForOneLine(board, playerType, enemyType,array2,array1);
-            if (result == 555) {
+            if (result == TWO_O_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
                     if (board[i][j] == 0) {
                         myPoint = new Point(i,j);
                     }
                 }
-            } else if (result == -555) {
+            } else if (result == TWO_X_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
                     if (board[i][j] == 0) {
                         enemyPoint = new Point(i,j);
@@ -51,13 +61,13 @@ public class AIPlayer {
             }
             //evaluate all cols
             result = getResultForOneLine(board, playerType, enemyType, array1,array2);
-            if (result == 555) {
+            if (result == TWO_O_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
                     if (board[i][j] == 0) {
                         myPoint = new Point(i,j);
                     }
                 }
-            } else if (result == -555) {
+            } else if (result == TWO_X_IN_A_LINE) {
                 for (int j = 0; j < 3; j++) {
                     if (board[i][j] == 0) {
                         enemyPoint = new Point(i,j);
@@ -68,13 +78,13 @@ public class AIPlayer {
         //evaluate diagonals
         int[] array3 = {2,1,0};
         result = getResultForOneLine(board, playerType, enemyType, array1, array1);
-        if (result == 555) {
+        if (result == TWO_O_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
                 if (board[j][j] == 0) {
                     myPoint = new Point(j,j);
                 }
             }
-        } else if (result == -555) {
+        } else if (result == TWO_X_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
                 if (board[j][j] == 0) {
                     enemyPoint = new Point(j,j);
@@ -82,13 +92,13 @@ public class AIPlayer {
             }
         }
         result = getResultForOneLine(board, playerType, enemyType, array1, array3);
-        if (result == 555) {
+        if (result == TWO_O_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
                 if (board[2 - j][j] == 0) {
                     myPoint = new Point(2-j,j);
                 }
             }
-        } else if (result == -555) {
+        } else if (result == TWO_X_IN_A_LINE) {
             for (int j = 0; j < 3; j++) {
                 if (board[2-j][j] == 0) {
                     enemyPoint = new Point(2-j,j);
@@ -108,7 +118,8 @@ public class AIPlayer {
 
 
 
-
+    /* minimax algorithm with alpha-beta pruning, will update field nextMove
+     */
     private int minimax(int depth, int alpha, int beta, int playerType) {
 
         List<Point> blankCells = game.findEmptyCells();
@@ -134,9 +145,9 @@ public class AIPlayer {
                 }
             }
             game.placeMove(point,0);
-//            if (beta <= alpha) {
-//                break;
-//            }
+            if (beta <= alpha) {
+                break;
+            }
         }
         return (playerType == Game.PLAYER_O) ? alpha : beta;
     }
@@ -162,7 +173,7 @@ public class AIPlayer {
     }
 
     //xValues and yValues corresponds to the x and y coordinate of a point in the board,
-    //  they are expected to have array length of 3
+    //  they are assumed to have array length of 3
     private int getResultForOneLine(int[][] board, int playerType, int enemyType, int[] xValues, int[] yValues) {
         int result = 0;
         int myCount = 0;
@@ -179,26 +190,31 @@ public class AIPlayer {
 
         if (myCount == 3) {
             result += 100;
-        } else if (myCount == 2) {
+        }
+        if (myCount == 2) {
+            //used in checkTwoInALine
             if (blankCount == 1) {
-                return 555;
+                return TWO_O_IN_A_LINE;
             }
             result += 20;
-        } else if (myCount == 1) {
+        }
+        if (myCount == 1) {
             result += 5;
-        } else if (enemyCount == 3) {
+        }
+        if (enemyCount == 3) {
             result += -100;
-        } else if (enemyCount == 2) {
+        }
+        if (enemyCount == 2) {
+            //used in checkTwoInALine
             if (blankCount == 1) {
-                return -555;
+                return TWO_X_IN_A_LINE;
             }
             result += -20;
-        } else if (enemyCount == 1) {
+        }
+        if (enemyCount == 1) {
             result += -5;
         }
 
         return result;
     }
-
-
 }
