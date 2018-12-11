@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e30f6794-f8ab-4ae1-9dd8-b8a710a4e56c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/GraphicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/AIPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/AIPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Board$XOListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe_AI/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,14 +47,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="44" />
-          <entry key="java" value="12017" />
+          <entry key="dummy" value="55" />
+          <entry key="java" value="12615" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12017" />
-          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="JAVA" value="12615" />
+          <entry key="PLAIN_TEXT" value="55" />
         </counts>
       </usages-collector>
     </session>
@@ -110,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+            <state relative-caret-position="1431">
+              <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#256#257#0" expanded="true" />
@@ -201,7 +190,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544520249423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544522240441" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CPSC_213/GUIThreads/ImageInverter" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -246,12 +235,12 @@
       <updated>1543128066115</updated>
       <workItem from="1543128069084" duration="22870000" />
       <workItem from="1544070902978" duration="3738000" />
-      <workItem from="1544398499435" duration="30509000" />
+      <workItem from="1544398499435" duration="32156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57117000" />
+    <option name="totallyTimeSpent" value="58764000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state relative-caret-position="1431">
+          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#256#257#0" expanded="true" />
